@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Modify Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 100%;
+            background: url(/images/bg2.jpg);
+        }
+
+        .div {
+            width: 700px;
+            height: 800px;
+            margin: 50px auto 20px;
+            background-color: #fff;
+            box-shadow: #777 10px 10px 10px;
+        }
+
+        h1,
+        legend {
+            position: absolute;
+            left: -9999px;
+            font-size: 0;
+        }
+
+        form {
+            padding: 50px;
+        }
+
+        fieldset {
+            border: none;
+        }
+
+        table {
+            background-color: #fff;
+        }
+
+        td {
+            display: inline-block;
+            margin-bottom: 30px;
+        }
+
+        label {
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .no>td {
+            margin-bottom: 50px;
+        }
+
+        .no>td>input {
+            width: 50px;
+            border: none;
+            border-bottom: 1px solid #000;
+        }
+
+        .date>td>input {
+            width: 165px;
+            border: none;
+            border-bottom: 1px solid #000;
+            text-align: center;
+        }
+
+        .title>td>input {
+            width: 300px;
+            border: none;
+            border-bottom: 1px solid #000;
+        }
+
+        .genre>td>input {
+            width: 100px;
+            border: none;
+            border-bottom: 1px solid #000;
+        }
+
+        .writer>td>input {
+            width: 250px;
+            border: none;
+            border-bottom: 1px solid #000;
+        }
+
+        .date,
+        .title {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .writer,
+        .genre {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .summary>td {
+            margin: 30px 0;
+        }
+
+        .summary>td>label,
+        .favorite>td>label {
+            position: relative;
+            top: -200px;
+        }
+
+        .favorite>td>label {
+            margin-right: 25px;
+        }
+
+
+        .btn {
+            width: 700px;
+            margin: 0 auto;
+        }
+
+        .btn>input {
+            float: right;
+            background-color: rgb(5, 5, 5);
+            border: 0;
+            padding: 10px 10px 10px;
+            /* border-radius: 50px; */
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .btn>input:hover {
+            background-color: rgb(240, 243, 159);
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <h1><span>Modify Page</span></h1>
+    <div class="div">
+        <form method="post">
+            <fieldset>
+                <legend>Create data</legend>
+                <table>
+                    <tr class="no">
+                        <td><label>No.</label><input type="number" name="No" value="<%= data.No %>"></td>
+                    </tr>
+                    <tr class="date">
+                        <td><label>Date</label><input type="text" name="Date" value="<%= data.Date %>"></td>
+                    </tr>
+                    <tr class="title">
+                        <td><label>Title</label><input type="text" name="Title" value="<%= data.Title %>"></td>
+                    </tr>
+                    <tr class="writer">
+                        <td><label>Writer or Director</label><input type="text" name="Writer"
+                                value="<%= data.Writer %>"></td>
+                    </tr>
+                    <tr class="genre">
+                        <td><label>Genre</label><input type="text" name="Genre" value="<%= data.Genre %>"></td>
+                    </tr>
+                    <tr class="summary">
+                        <td><label>Summary</label><textarea name="Summary" cols="68"
+                                rows="14"><%= data.Summary %></textarea></td>
+                    </tr>
+                    <tr class="favorite">
+                        <td><label>Favorite</label><textarea name="Favorite" cols="68"
+                                rows="14"><%= data.Favorite %></textarea></td>
+                    </tr>
+                </table>
+            </fieldset>
+    </div>
+    <div class="btn"><input type="submit" value="Modify" class="submit"></div>
+    </form>
+</body>
+
+</html>

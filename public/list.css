@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    text-decoration: none;
+    color: #000;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+}
+
+.bg {
+    width: 30%;
+    min-width: 250px;
+    height: 969px;
+    float: left;
+    background: url(./images/bg.jpg);
+}
+
+.bg>h1 {
+    font-size: 60px;
+    text-shadow: #777 5px 5px 5px;
+    font-weight: normal;
+    text-align: center;
+    position: relative;
+    top: 800px;
+}
+
+.tb {
+    width: 70%;
+    height: 969px;
+    float: left;
+}
+
+.tb>div {
+    width: 90%;
+    margin: 50px auto;
+}
+
+.tb>div>table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+.tb>div>table th {
+    border-bottom: 3px double #000;
+    font-size: 1em;
+    padding-bottom: 10px;
+    text-align: left;
+}
+
+.tb>div>table td {
+    border-bottom: 1px solid #ccc;
+    font-size: 0.9em;
+    padding: 15px 5px;
+}
+
+table td:nth-child(6)>a {
+    font-size: 0.8em;
+    background-color: rgb(77, 77, 77);
+    padding: 4px 5px 5px;
+    /* border-radius: 5px; */
+    text-decoration: none;
+    color: #fff;
+}
+
+form>button {
+    background-color: rgb(5, 5, 5);
+    border: 0;
+    padding: 10px 10px 10px;
+    /* border-radius: 50px; */
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+    float: right;
+}
+
+table td:nth-child(6)>a:hover, table td:nth-child(7)>a:hover, form>button:hover {
+    background-color: rgb(240, 243, 159);
+    color: #333;
+}

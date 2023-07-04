@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./list.css">
+    <title>Review List</title>
+</head>
+<body>
+    <div class="bg">
+        <h1>REVIEW</h1>
+    </div>
+    <div class="tb">
+        <div>
+        <table>
+            <tr>
+                <th>No.</th>
+                <th>Date</th>
+                <th>Title</th>
+                <th>Writer or Director</th>
+                <th>Genre</th>
+                <th>DELETE</th>
+            </tr>
+            <% data.forEach(function (list, index) { %>
+            <tr>
+                <td><%= list.No %></td>
+                <td><a href="/modify/<%= list.No %>"><%= list.Date %></a></td>
+                <td><a href="/modify/<%= list.No %>"><%= list.Title %></a></td>
+                <td><a href="/modify/<%= list.No %>"><%= list.Writer %></a></td>
+                <td><a href="/modify/<%= list.No %>"><%= list.Genre %></a></td>
+                <td><a href="/delete/<%= list.No %>">DELETE</a></td>
+            </tr>
+            <% }); %>
+        </table>
+        <form action="/create" method="get">
+            <button type="submit">CREATE</button>
+         </form>
+        </div>
+    </div>
+</body>
+</html>
